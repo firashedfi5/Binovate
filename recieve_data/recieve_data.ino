@@ -2,16 +2,16 @@
 #include <WebServer.h>
 
 // Replace with your network credentials
-const char* ssid = "TOPNET_71F8";
-const char* password = "2r4kkwu277";
+const char* ssid = "Click'airouan Store";
+const char* password = "CLICKAIROUANSTORE";
 
 WebServer server(80);  // Start the server on port 80
 
 // Function to handle the float value sent to the ESP32
 void handleData() {
   if (server.hasArg("value")) {
-    String floatStr = server.arg("value");
-    float receivedValue = floatStr.toFloat();  // Convert to float
+    String receivedValue = server.arg("value");
+    //float receivedValue = floatStr.toFloat();  // Convert to float
     
     // Print the received value in the Serial Monitor
     Serial.print("Received Value: ");
