@@ -2,8 +2,8 @@
 #include <WebServer.h>
 
 // Replace with your network credentials
-const char* ssid = "Click'airouan Store";
-const char* password = "CLICKAIROUANSTORE";
+const char* ssid = "POCO X3 Pro";
+const char* password = "firasHEDFI03267";
 
 WebServer server(80);  // Start the server on port 80
 

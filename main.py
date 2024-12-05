@@ -32,7 +32,7 @@ print("Classified:",predicted_class,'\n')
 
 
 # Replace with your ESP32's IP address
-esp32_ip = "http://192.168.1.211/send"
+esp32_ip = "http://192.168.72.109/send"
 # float_value = "Firas Hedfi"  # Example float from your CNN model
 
 # Send the data to the ESP32
