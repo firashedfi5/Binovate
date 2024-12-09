@@ -9,8 +9,8 @@ const int servo1Pin = 13;
 const int servo2Pin = 27;
 
 // GPIO pins for LEDs
-const int GreenLedPin = 14;
-const int RedLedPin = 12;
+const int GreenLedPin = 15;
+const int RedLedPin = 16;
 
 // Stepper motor configuration
 const int DIR_PIN = 12;
@@ -89,8 +89,8 @@ void setup() {
   // Initialize LEDs
   pinMode(GreenLedPin, OUTPUT);
   pinMode(RedLedPin, OUTPUT);
-  digitalWrite(GreenLedPin, LOW); // Green LED off by default
-  digitalWrite(RedLedPin, HIGH); // Red LED on by default
+  digitalWrite(GreenLedPin, HIGH); // Green LED off by default
+  digitalWrite(RedLedPin, LOW); // Red LED on by default
 
   // Initialize stepper motor
   pinMode(STEP_PIN, OUTPUT);
@@ -141,10 +141,14 @@ void loop() {
     delay(5000); // Wait 5 seconds before rotating 90°
     rotateServo(servo1, 90); // Rotate back to 90° for both servos
     rotateServo(servo2, 90);
+    digitalWrite(GreenLedPin, LOW); // Green LED off by default
+    digitalWrite(RedLedPin, HIGH);
 
     delay(5000); // Wait 5 seconds before rotating back to initial position
     rotateServo(servo1, 180); // Rotate back to 180° for both servos
     rotateServo(servo2, 180);
+    digitalWrite(GreenLedPin, HIGH); // Green LED off by default
+    digitalWrite(RedLedPin, LOW);
 
     hasRotated = false; // Reset flag
   }

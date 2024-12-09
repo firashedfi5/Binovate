@@ -30,10 +30,10 @@ print("Classified:",predicted_class,'\n')
 # plt.imshow(img.squeeze())
 # plt.title("Loaded Image")   
 
-sendedValue = "paper"
+sendedValue = "trash"
 
 # Replace with your ESP32's IP address
-esp32_ip = "http://192.168.19.109/send"
+esp32_ip = "http://192.168.249.109/send"
 # float_value = "Firas Hedfi"  # Example float from your CNN model
 
 # Send the data to the ESP32
