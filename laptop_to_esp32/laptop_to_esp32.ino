@@ -22,8 +22,8 @@ int currentPosition = 0;  // This will keep track of the current position of the
 bool hasRotated = false;
 
 // Wi-Fi credentials
-const char* ssid = "POCO X3 Pro";
-const char* password = "firasHEDFI03267";
+const char* ssid = "FIRAS_HEDFI 1656";
+const char* password = "11111111";
 
 // Web server setup
 WebServer server(80);

@@ -24,7 +24,7 @@ new_model.compile(optimizer='adam', loss='categorical_crossentropy')
 number_to_class = ['glass', 'paper', 'plastic', 'trash']
 
 # ESP32 IP address
-esp32_ip = "http://192.168.249.109/send"
+esp32_ip = "http://192.168.137.133/send"
 
 # Function to preprocess image for prediction
 def preprocess_img(img_path):
@@ -78,6 +78,7 @@ def upload():
 
         # Make prediction
         predicted_class = predict_class(img_path)
+        print(f"=> The predicted class is : {predicted_class}")
 
         # Send prediction to ESP32
         response = requests.get(esp32_ip, params={"value": predicted_class})
